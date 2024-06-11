@@ -1,0 +1,118 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+
+console.log("JS here");
+---
+
+<header>
+  <nav>
+    <div class="nav-title">
+      <h3>Trueque</h3>
+    </div>
+    <div class="nav-items">
+      <HeaderButton link="/market">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+          <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+          <path d="M17 17h-11v-14h-2"></path>
+          <path d="M6 5l14 1l-1 7h-13"></path>
+        </svg>
+        Market
+      </HeaderButton>
+      <HeaderButton link="/my-stand">
+        <svg
+          slot="before"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 21l18 0"></path>
+          <path
+            d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"
+          ></path>
+          <path d="M5 21l0 -10.15"></path>
+          <path d="M19 21l0 -10.15"></path>
+          <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path>
+        </svg>
+        My stand
+      </HeaderButton>
+      <HeaderButton link="/about">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+          <path d="M12 9h.01"></path>
+          <path d="M11 12h1v4h1"></path>
+        </svg>
+        About
+      </HeaderButton>
+      <HeaderButton link="/me">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#2c3e50"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+        </svg>
+        Me
+      </HeaderButton>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    nav {
+      width: 100%;
+      max-width: 1440px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      .nav-title {
+        font-size: 24px;
+      }
+
+      .nav-items {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+    }
+  }
+</style>

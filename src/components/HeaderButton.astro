@@ -1,0 +1,30 @@
+---
+interface Props {
+  link: string;
+}
+
+const { link } = Astro.props;
+---
+
+<a href={link}>
+    <slot name="before"/>
+    <slot>Default text</slot>
+    <slot name="after"/>
+</a>
+
+<style>
+  a {
+    color: var(--accent-dark-light);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+     gap: 4px;
+
+    svg{
+        width: 16px;
+        height: 16px;
+    }
+  }
+</style>
